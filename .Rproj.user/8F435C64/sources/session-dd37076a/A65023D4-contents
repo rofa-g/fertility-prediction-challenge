@@ -95,24 +95,3 @@ predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds
   # Return only dataset with predictions and identifier
   return( df_predict )
 }
-
-
-df <- read.csv("PreFer_fake_data.csv")
-
-
-clean_df(df = df)
-
-
-train_save_model(clean_df(df = df))
-
-
-predict_outcomes(df = df)
-
-#test
-
-
-library(data.table)
-
-test_preferfake <- 
-fread("PreFer_fake_data.csv")
-
